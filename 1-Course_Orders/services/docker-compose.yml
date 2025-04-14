@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  checkout:
+    build: ./checkout
+    ports:
+      - "3001:3000"
+    env_file:
+      - ./checkout/.env
+    depends_on:
+      - checkout_db
+
+  checkout_db:
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: checkout_db
+    ports:
+      - "5433:5432"
+
+  payment:
+    build: ./payment
+    ports:
+      - "3002:3000"
+    env_file:
+      - ./payment/.env
+    depends_on:
+      - payment_db
+
+  payment_db:
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: payment_db
+    ports:
+      - "5434:5432"
