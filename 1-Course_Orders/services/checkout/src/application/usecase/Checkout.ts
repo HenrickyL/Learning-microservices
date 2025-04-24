@@ -6,8 +6,8 @@ import { IUseCase } from "@infra/core/IUseCase";
 export class Checkout implements IUseCase<Input, Output>{
 
     constructor(
+        readonly orderRepository: IOrderRepository,
         readonly courseRepository: ICourseRepository,
-        readonly orderRepository: IOrderRepository
     ){}
 
     async execute(input: Input): Promise<Output> {
