@@ -1,6 +1,6 @@
 import crypto from "crypto"
-import { IEntity } from "@domain/infra/IEntity";
 import { OrderStatus } from "@domain/enum/OrderStatus";
+import { IEntity } from "@infra/core/IEntity";
 
 export class Order implements IEntity{
     constructor(

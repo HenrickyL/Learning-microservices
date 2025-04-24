@@ -1,7 +1,7 @@
 import { ICourseRepository } from "@application/repository/ICourseRepository";
-import { IUseCase } from "../infra/IUseCase";
 import { IOrderRepository } from "@application/repository/IOrderRepository";
 import { Order } from "@domain/entity/Order";
+import { IUseCase } from "@infra/core/IUseCase";
 
 export class Checkout implements IUseCase<Input, Output>{
 
