@@ -1,4 +1,4 @@
-import { IEntity } from "@infra/core/IEntity";
+import { IEntity } from "@infra/core/base/IEntity";
 
 export class Course implements IEntity{
     constructor(
