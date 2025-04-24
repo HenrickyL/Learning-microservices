@@ -1,12 +1,21 @@
 {
+  "moduleResolution": "node",
   "compilerOptions": {
     "target": "es2019",
     "module": "commonjs",
-    "rootDir": ".",
+    // "rootDir": "./src",
+    "baseUrl": ".",
     "outDir": "dist",
     "strict": true,
     "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,   
     "types": ["jest"],
+    "paths": {
+      "@infra/*": ["./src/infra/*"],
+      "@application/*": ["./src/application/*"],
+      "@domain/*": ["./src/domain/*"],
+    }
   },
   "include": ["src", "tests"],
   "exclude": ["node_modules", "dist"]
