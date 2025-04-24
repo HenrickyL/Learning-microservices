@@ -3,7 +3,7 @@ import { IOrderRepository } from "@application/repository/IOrderRepository";
 import { Order } from "@domain/entity/Order";
 import { IUseCase } from "@infra/core/IUseCase";
 
-export class Checkout implements IUseCase<Input, Output>{
+export class CheckoutUseCase implements IUseCase<Input, Output>{
 
     constructor(
         readonly orderRepository: IOrderRepository,

@@ -1,7 +1,7 @@
 import { ICourseRepository } from "@application/repository/ICourseRepository";
 import { Course } from "@domain/entity/Course";
 import { Mapper } from "@domain/mappar";
-import { CourseModel } from "@infra/model/CourseModel";
+import { CourseModel } from "@infra/core/model/CourseModel";
 import { prisma } from "@infra/prisma";
 
 export class CourseRepositoryDB implements ICourseRepository{

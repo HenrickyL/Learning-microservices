@@ -1,7 +1,7 @@
 import { IOrderRepository } from "@application/repository/IOrderRepository";
 import { Order } from "@domain/entity/Order";
 import { Mapper } from "@domain/mappar";
-import { OrderModel } from "@infra/model/OrderModel";
+import { OrderModel } from "@infra/core/model/OrderModel";
 import { prisma } from "@infra/prisma";
 
 export class OrderRepositoryDB implements IOrderRepository{

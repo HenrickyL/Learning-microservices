@@ -1,7 +1,7 @@
 import { Order } from "@domain/entity/Order";
 import { OrderStatus } from "@domain/enum/OrderStatus";
 import { IMapper } from "@infra/core/IMapper";
-import { OrderModel } from "@infra/model/OrderModel";
+import { OrderModel } from "@infra/core/model/OrderModel";
 import { Decimal } from "@prisma/client/runtime/library";
 
 export class OrderMapper implements IMapper<Order, OrderModel>{

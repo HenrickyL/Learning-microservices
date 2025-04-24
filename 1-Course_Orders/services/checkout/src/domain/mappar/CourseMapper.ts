@@ -1,6 +1,6 @@
 import { Course } from "@domain/entity/Course";
 import { IMapper } from "@infra/core/IMapper";
-import { CourseModel } from "@infra/model/CourseModel";
+import { CourseModel } from "@infra/core/model/CourseModel";
 import { Decimal } from "@prisma/client/runtime/library";
 
 export class CourseMapper implements IMapper<Course, CourseModel>{
