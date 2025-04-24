@@ -8,17 +8,17 @@ generator client {
 }
 
 
-model course {
+model Course {
   course_id String   @id @default(uuid())
   title     String
   amount    Decimal
 
-  orders    order[]  @relation("CourseOrders")
+  orders    Order[]  @relation("CourseOrders")
   
-  @@map("course")
+  @@map("Course")
 }
 
-model order {
+model Order {
   order_id  String   @id @default(uuid())
   course_id String
   name      String
@@ -26,7 +26,7 @@ model order {
   status    String
   amount    Decimal
 
-  course    course   @relation("CourseOrders", fields: [course_id], references: [course_id])
+  course    Course   @relation("CourseOrders", fields: [course_id], references: [course_id])
   
-  @@map("order")
+  @@map("Order")
 }
