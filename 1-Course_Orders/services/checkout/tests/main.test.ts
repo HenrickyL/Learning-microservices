@@ -1,12 +1,12 @@
-import { Checkout } from "@application/usecase/Checkout";
-import { CourseRepositoryDB } from "@infra/repository/CourseRepositoryDB";
-import { OrderRepositoryDB } from "@infra/repository/OrderRepositoryDB";
+import { CheckoutUseCase } from "@application/usecase/Checkout";
+import { CourseRepositoryDB } from "@infra/prisma/repository/CourseRepositoryDB";
+import { OrderRepositoryDB } from "@infra/prisma/repository/OrderRepositoryDB";
 
 //main.test.ts
 test("must do checkout", async ()=>{
     const orderRepository = new OrderRepositoryDB();
     const courseRepository = new CourseRepositoryDB();
-    const checkout = new Checkout(orderRepository, courseRepository);
+    const checkout = new CheckoutUseCase(orderRepository, courseRepository);
 
     const input = {
         courseId: "",

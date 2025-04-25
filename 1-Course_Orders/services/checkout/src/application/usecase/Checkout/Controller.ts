@@ -1,5 +1,4 @@
 import { CheckoutUseCase } from '@application/usecase/Checkout';
-import { IController } from '@infra/core/base/IController';
 
 export class CheckoutController implements IController<any, any>{
     constructor(

@@ -1,22 +1,46 @@
+// {
+//   "moduleResolution": "node",
+//   "compilerOptions": {
+//     "target": "es2019",
+//     "module": "commonjs",
+//     // "rootDir": "./src",
+//     "baseUrl": ".",
+//     "outDir": "dist",
+//     "strict": true,
+//     "esModuleInterop": true,
+//     "allowSyntheticDefaultImports": true,
+//     "sourceMap": true,   
+//     "types": ["jest"],
+//     "paths": {
+//       "@infra/*": ["./src/infra/*"],
+//       "@application/*": ["./src/application/*"],
+//       "@domain/*": ["./src/domain/*"],
+//     }
+//   },
+//   "include": ["src", "tests"],
+//   "exclude": ["node_modules", "dist"]
+// }
+
 {
   "moduleResolution": "node",
+  "extends": "../../tsconfig.base.json",
+  // "references": [
+  //   { "path": "../../shared"}
+  // ],
   "compilerOptions": {
-    "target": "es2019",
-    "module": "commonjs",
-    // "rootDir": "./src",
-    "baseUrl": ".",
     "outDir": "dist",
-    "strict": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "sourceMap": true,   
+    "baseUrl": ".",
     "types": ["jest"],
     "paths": {
       "@infra/*": ["./src/infra/*"],
       "@application/*": ["./src/application/*"],
       "@domain/*": ["./src/domain/*"],
+      // "@shared/*": ["../../shared/src/*"]
     }
   },
   "include": ["src", "tests"],
-  "exclude": ["node_modules", "dist"]
+  "exclude": ["node_modules", "dist"],
+  "references": [
+    { "path": "../../shared" }
+  ]
 }
