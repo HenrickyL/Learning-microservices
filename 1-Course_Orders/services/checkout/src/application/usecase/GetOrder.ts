@@ -1,6 +1,6 @@
-import { IUseCase } from "@infra/core/IUseCase";
 import { IOrderRepository } from '../repository/IOrderRepository';
 import { OrderStatus } from "@domain/enum/OrderStatus";
+import {IUseCase} from "@shared/infra/base/IUseCase"
 
 export class GetOrder implements IUseCase<Input, Output>{
     constructor(

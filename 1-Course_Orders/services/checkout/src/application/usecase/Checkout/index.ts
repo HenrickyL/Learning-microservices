@@ -1,10 +1,9 @@
 import { ICourseRepository } from "@application/repository/ICourseRepository";
 import { IOrderRepository } from "@application/repository/IOrderRepository";
 import { Order } from "@domain/entity/Order";
-import { IUseCase } from "@infra/core/IUseCase";
+import { IUseCase } from "@shared/infra/base/IUseCase"
 
 export class CheckoutUseCase implements IUseCase<Input, Output>{
-
     constructor(
         readonly orderRepository: IOrderRepository,
         readonly courseRepository: ICourseRepository,

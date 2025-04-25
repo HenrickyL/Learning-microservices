@@ -1,5 +1,5 @@
 import { Course } from "@domain/entity/Course";
-import { IRepository } from "@infra/core/base/IRepository";
+import {IRepository} from "@shared/infra/base/IRepository"
 
 export interface ICourseRepository extends IRepository<Course>{
     get(courseId: string): Promise<Course>

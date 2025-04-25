@@ -21,21 +21,17 @@
 //   "exclude": ["node_modules", "dist"]
 // }
 
+
 {
-  "moduleResolution": "node",
   "extends": "../../tsconfig.base.json",
-  // "references": [
-  //   { "path": "../../shared"}
-  // ],
   "compilerOptions": {
-    "outDir": "dist",
     "baseUrl": ".",
     "types": ["jest"],
     "paths": {
       "@infra/*": ["./src/infra/*"],
       "@application/*": ["./src/application/*"],
       "@domain/*": ["./src/domain/*"],
-      // "@shared/*": ["../../shared/src/*"]
+      "@shared/*": ["../../shared/*"],
     }
   },
   "include": ["src", "tests"],

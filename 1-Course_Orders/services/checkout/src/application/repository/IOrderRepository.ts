@@ -1,5 +1,5 @@
 import { Order } from "@domain/entity/Order";
-import { IRepository } from "@infra/core/base/IRepository";
+import {IRepository} from "@shared/infra/base/IRepository"
 
 export interface IOrderRepository extends IRepository<Order>{
     save(order: Order): Promise<void>

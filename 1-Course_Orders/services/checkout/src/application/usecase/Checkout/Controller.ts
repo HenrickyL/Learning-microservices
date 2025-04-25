@@ -1,4 +1,5 @@
-import { CheckoutUseCase } from '@application/usecase/Checkout';
+import { CheckoutUseCase } from ".";
+import { IController } from '@shared/infra/base/IController';
 
 export class CheckoutController implements IController<any, any>{
     constructor(

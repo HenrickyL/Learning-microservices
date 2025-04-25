@@ -1,5 +1,5 @@
 {
-  "name": "checkout",
+  "name": "checkout-service",
   "version": "1.0.0",
   "description": "",
   "main": "./src/main.ts",
@@ -27,6 +27,7 @@
     "typescript": "^5.8.3"
   },
   "dependencies": {
+    "@shared/shared": "file:../../shared",
     "@prisma/client": "^6.6.0",
     "cors": "^2.8.5",
     "crypto": "^1.0.1",

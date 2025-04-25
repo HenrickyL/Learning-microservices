@@ -1,0 +1,17 @@
+{
+    "name": "micro",
+    "private": true,
+    "version": "1.0.0",
+    "main": "index.js",
+    "author": "Henricky",
+    "license": "MIT",
+    "workspaces": [
+      "./services/*"
+    ],
+    "scripts": {
+    },
+    "devDependencies": {
+     
+    },
+    "dependencies": {}
+  }
