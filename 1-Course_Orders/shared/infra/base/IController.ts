@@ -1,4 +1,4 @@
-import { HttpResponse } from "../httpResponse"
+import { HttpResponse } from "../http"
 
 export interface IController<REQ, RES>{
     handle(request: REQ): Promise<HttpResponse<RES>>
