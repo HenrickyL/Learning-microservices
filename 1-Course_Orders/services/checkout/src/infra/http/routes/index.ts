@@ -1,6 +1,7 @@
 import express from 'express';
-// import { usersRouter } from './users.routes'
+import checkoutRouter from './checkout.router'
 
 const router = express.Router();
 
+router.use('/checkout', checkoutRouter)
 export { router };
