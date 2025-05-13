@@ -15,5 +15,4 @@ public class AccountsApplication {
 //		System.setProperty("SPRING_DRIVER_CLASS_NAME", dotenv.get("SPRING_DRIVER_CLASS_NAME"));
 		SpringApplication.run(AccountsApplication.class, args);
 	}
-
 }
