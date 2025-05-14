@@ -4,9 +4,8 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Getter @Setter @ToString @AllArgsConstructor @NoArgsConstructor
+@Data
 public class Account extends  BaseEntity{
-
     @Column(name = "customer_id")
     private Long customerId;
 
