@@ -11,8 +11,8 @@ public class PaymentSuccessProducer {
 
     public void generateResponse(String message){
         amqpTemplate.convertAndSend(
-                "payment-response-error-exchange",
-                "payment-response-error-rout-key",
+                "payment-response-success-exchenge",
+                "payment-response-succes-rout-key",
                 message
         );
     }

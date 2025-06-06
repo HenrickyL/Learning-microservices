@@ -11,7 +11,7 @@ public class PaymentErrorProducer {
 
     public void generateResponse(String message){
         amqpTemplate.convertAndSend(
-                "payment-response-error-exchange",
+                "payment-response-error-exchenge",
                 "payment-response-error-rout-key",
                 message
         );

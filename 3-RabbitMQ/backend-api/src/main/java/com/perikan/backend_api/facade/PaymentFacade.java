@@ -18,4 +18,12 @@ public class PaymentFacade {
         }
         return "Pagamento Aguardando Confirmação";
     }
+
+    public void paymentError(String payload){
+        System.err.println("===Response Error === "+payload);
+    }
+
+    public void paymentSuccess(String payload){
+        System.out.println("===Response Success === "+ payload);
+    }
 }
